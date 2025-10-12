@@ -79,6 +79,7 @@ export class TareaPage implements OnInit {
       this.tareaService.agregarTarea(this.tarea);
       await this.mostrarAlerta('Tarea creada correctamente ✅');
     }
+    this.router.navigateByUrl('/home', { replaceUrl: true });
   }
 
 
@@ -127,7 +128,6 @@ export class TareaPage implements OnInit {
 
     await alert.present();
     await alert.onDidDismiss();
-    this.router.navigateByUrl('/home', { replaceUrl: true });
   }
 
 }
