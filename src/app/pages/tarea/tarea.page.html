@@ -1,0 +1,52 @@
+<ion-content class="fondo">
+
+  <div class="container mt-4 mb-5">
+    <!-- Encabezado -->
+    <div class="d-flex align-items-center justify-content-between mb-4">
+      <button class="btn-regresar" routerLink="/home">← REGRESAR</button>
+      <h1 class="titulo m-0">Tareas</h1>
+    </div>
+
+    <!-- Formulario -->
+    <form (ngSubmit)="guardarTarea()" novalidate>
+
+      <!-- Nombre -->
+      <div class="mb-3">
+        <label for="titulo" class="form-label fw-semibold">Nombre de la Tarea *</label>
+        <input id="titulo" type="text" [(ngModel)]="tarea.titulo" name="titulo" class="form-control"
+          [class.is-valid]="!errores.titulo && tarea.titulo" [class.is-invalid]="errores.titulo" required>
+        <small *ngIf="errores.titulo" class="error">{{ errores.titulo }}</small>
+      </div>
+
+      <!-- Descripción -->
+      <div class="mb-3">
+        <label for="descripcion" class="form-label fw-semibold">Descripción *</label>
+        <textarea id="descripcion" rows="3" [(ngModel)]="tarea.descripcion" name="descripcion" class="form-control"
+          [class.is-valid]="!errores.descripcion && tarea.descripcion" [class.is-invalid]="errores.descripcion"
+          required></textarea>
+        <small *ngIf="errores.descripcion" class="error">{{ errores.descripcion }}</small>
+      </div>
+
+      <!-- Fecha de vencimiento -->
+      <label for="fecha" class="form-label fw-semibold">Fecha de vencimiento *</label>
+      <ion-datetime id="fecha" name="fecha" presentation="date" locale="es-ES" [(ngModel)]="tarea.fecha"
+        [class.is-valid]="!errores.fecha && tarea.fecha" [class.is-invalid]="errores.fecha" mode="ios" required>
+      </ion-datetime>
+      <small *ngIf="errores.fecha" class="error">{{ errores.fecha }}</small>
+
+      <!-- Botones -->
+      <div class="botones-acciones d-flex justify-content-between mt-4">
+  <button type="submit" class="btn-guardar">
+    <ion-icon name="shield-checkmark-outline" class="icono-guardar"></ion-icon>
+    Guardar
+  </button>
+
+  <button type="button" class="btn-cancelar" routerLink="/home">
+    <ion-icon name="ban-outline" class="icono-cancelar"></ion-icon>
+    Cancelar
+  </button>
+</div>
+    </form>
+  </div>
+
+</ion-content>

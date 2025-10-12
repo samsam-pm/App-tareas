@@ -1,27 +1,126 @@
-#container {
-  text-align: center;
+/* Importa Bootstrap (si no está en global.scss) */
+@import "~bootstrap/dist/css/bootstrap.min.css";
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+/* Fondo y fuente general */
+ion-content {
+  --background: #ffffff;
+  font-family: 'Poppins', sans-serif;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+/* Encabezado */
+.encabezado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
+.titulo-texto {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
   margin: 0;
 }
 
-#container a {
-  text-decoration: none;
+/* Botón Nueva Tarea */
+.btn-nueva-tarea {
+  background-color: #cb6ce6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-nueva-tarea:hover {
+  background-color: #b456d1;
+  transform: translateY(-2px);
+}
+
+/* Estado sin tareas */
+.sin-tareas {
+  text-align: center;
+  color: gray;
+  margin-top: 100px;
+  font-weight: 600;
+}
+
+/* Lista y tarjetas */
+.lista-tareas {
+  margin-top: 10px;
+}
+
+.tarea-acciones {
+  display: flex;
+  gap: 10px;
+  font-size: 22px;
+}
+
+.tarea-card {
+  color: #000;
+ background-color: #fff;
+  border: 3px solid #000 !important;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.25s ease;
+}
+
+/* Zoom al pasar el mouse */
+.tarea-card:hover {
+  transform: scale(1.02);
+  border-color: #8c52ff; /* color del borde al hover */
+  box-shadow: 0 4px 10px rgba(140, 82, 255, 0.2);
+}
+
+.tarea-card h2 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.tarea-card p {
+  margin: 5px 0;
+}
+
+/*Editar y eliminar*/
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* separa “ver detalles” de los íconos */
+}
+
+.icono-editar {
+  color: #1800ad;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.icono-eliminar {
+  color: #ff4d4d;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.icono-editar:hover {
+  transform: scale(1.2);
+}
+
+.icono-eliminar:hover {
+  transform: scale(1.2);
+}
+
+
+/* “Ver detalles” */
+.ver-detalles {
+  color: #8c52ff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.ver-detalles:hover {
+  color: #6b35ff;
 }

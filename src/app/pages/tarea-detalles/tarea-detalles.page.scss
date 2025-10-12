@@ -1,0 +1,119 @@
+/* Fondo general */
+ion-content {
+  --background: #ffffff !important; /* fuerza fondo blanco/gris */
+  color: #000 !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Encabezado */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* Botón REGRESAR */
+.btn-regresar {
+  background-color: #cb6ce6;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 22px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-regresar:hover {
+  background-color: #b44ad0;
+  transform: translateY(-1px);
+}
+
+.titulo {
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+  margin: 0;
+}
+
+/* Formulario */
+.form-control {
+  width: 100%;
+  border: 2px solid #000;
+  padding: 8px;
+  background-color: #fff;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+/* Hace que las etiquetas (labels) se vean visibles */
+label {
+  color: #000 !important;
+  font-weight: 600;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 40px;
+}
+/* Botón Editar */
+.btn-editar {
+  background: none;
+  border: none;
+  color: #1800ad;
+  font-weight: 800;
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  margin-top: 30px;
+}
+
+.btn-editar:hover {
+  transform: scale(1.1);
+  color: #110088;
+}
+
+/* Ícono del lápiz */
+.icono-editar-boton {
+  font-size: 1.8rem;
+  color: inherit;
+}
+
+/* Botón Guardar */
+.btn-guardar {
+  background: none;
+  border: none;
+  color: #25d366;
+  font-weight: 800;
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  margin-top: 30px;
+}
+
+.btn-guardar:hover {
+  transform: scale(1.1);
+  color: #1da851;
+}
+
+/* Ícono del escudo */
+.icono-guardar-boton {
+  font-size: 1.8rem;
+  color: inherit;
+}

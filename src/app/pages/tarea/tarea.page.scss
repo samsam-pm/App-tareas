@@ -1,0 +1,143 @@
+:host {
+  --ion-background-color: white !important;
+  --ion-text-color: black !important;
+  --ion-color-light: white !important;
+  --ion-color-dark: black !important;
+}
+/* Fondo */
+.fondo {
+  background-color: white;
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+/* Encabezado */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* Botón REGRESAR */
+.btn-regresar {
+  background-color: #cb6ce6;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 22px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-regresar:hover {
+  background-color: #b44ad0;
+  transform: translateY(-1px);
+}
+
+.titulo {
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+  margin: 0;
+}
+
+/* Etiquetas */
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* Inputs, textarea y calendario */
+input,
+textarea{
+  width: 100%;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  color: black;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+/* Validaciones */
+.is-invalid {
+  border-color: #dc3545;
+  background-color: #fff4f4;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 14px;
+}
+
+ion-datetime {
+  border: 2px solid black; /* 👈 solo el borde negro */
+  border-radius: 8px;      /* opcional, esquinas un poco suaves */
+  padding: 5px;            /* un pequeño espacio interno */
+}
+
+/* ======== BOTONES DE ACCIÓN ======== */
+.botones-acciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* ----- Guardar ----- */
+.btn-guardar {
+  background: none;
+  border: none;
+  color: #55d66b;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.btn-guardar:hover {
+  color: #2ec24d;
+  transform: scale(1.05);
+}
+
+.icono-guardar {
+  font-size: 1.8rem;
+  color: inherit;
+}
+
+/* ----- Cancelar ----- */
+.btn-cancelar {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.btn-cancelar:hover {
+  color: #d63333;
+  transform: scale(1.05);
+}
+
+.icono-cancelar {
+  font-size: 1.8rem;
+  color: inherit;
+}

@@ -1,0 +1,44 @@
+<ion-content class="ion-padding fondo">
+
+  <div class="container mt-4">
+    <!-- Encabezado -->
+    <div class="d-flex align-items-center justify-content-between mb-4">
+      <button class="btn-regresar" routerLink="/home">← REGRESAR</button>
+      <h1 class="titulo m-0">Tarea Detalles</h1>
+    </div>
+
+    <!-- Formulario -->
+    <form class="formulario mt-4" (ngSubmit)="guardarCambios()">
+
+      <div class="mb-3">
+        <label class="fw-semibold">Nombre de la Tarea</label>
+        <input type="text" [(ngModel)]="tarea.titulo" name="titulo" [disabled]="!modoEdicion" class="form-control" />
+      </div>
+
+      <div class="mb-3">
+        <label class="fw-semibold">Descripción</label>
+        <textarea rows="3" [(ngModel)]="tarea.descripcion" name="descripcion" [disabled]="!modoEdicion"
+          class="form-control"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="fw-semibold">Fecha de vencimiento</label>
+        <input type="date" [(ngModel)]="tarea.fecha" name="fecha" [disabled]="!modoEdicion" class="form-control" />
+      </div>
+
+      <div class="text-end mt-4">
+        <button *ngIf="modoEdicion" type="submit" class="btn-guardar">
+          <ion-icon name="shield-checkmark-outline" class="icono-guardar-boton"></ion-icon>
+          Guardar
+        </button>
+
+        <button *ngIf="!modoEdicion" type="button" class="btn-editar" (click)="activarEdicion()">
+          <ion-icon name="create-outline" class="icono-editar-boton"></ion-icon>
+          Editar
+        </button>
+
+      </div>
+    </form>
+  </div>
+
+</ion-content>
