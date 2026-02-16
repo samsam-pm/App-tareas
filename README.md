@@ -36,6 +36,6 @@ Objetivos:
 
 - Implementar persistencia local para guardar tareas sin conexión.
 
-Optimizar la carga con Lazy Loading.
+- Optimizar la carga con Lazy Loading.
 
 La aplicación destaca por su arquitectura modular, optimización en la carga de datos y experiencia de usuario fluida y fácil de usar.
